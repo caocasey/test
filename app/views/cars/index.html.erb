@@ -15,7 +15,7 @@
   <tbody>
     <% @cars.each do |car| %>
       <tr>
-        <td><%= car.user %></td>
+        <td><%= User.find(car.user_id).name %></td>
         <td><%= car.condition %></td>
         <td><%= car.year %></td>
         <td><%= link_to 'Show', car %></td>
